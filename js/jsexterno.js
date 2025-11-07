@@ -60,10 +60,10 @@ function dividir(num1, num2) {
 
 function fundamentosJS() {
     /* Tipos de variables */
-    var nombre = "Ronaldo"; // antigua, considerada obsoleta
-    let apellido = "Enriquez" // variables cambiantes
+    var nombre = "David"; // antigua, considerada obsoleta
+    let apellido = "Llumiquinga" // variables cambiantes
     let apellido2 = 15;
-    apellido2 = "Puetate";
+    apellido2 = "tasiguano";
     let arreglo = [1, 2, 3, 4, 5, 6];
     let diasSemana = ['Lunes', 'Martes', '...'];
     const IVA = 12.8;
@@ -152,4 +152,105 @@ function fundamentosJS() {
         console.log(clave);
         console.log(profesor[clave]);
     }
+    /**Desestructuracion */
+    /**es una forma sencilla y practica pra extraer valores de un 
+     * objetos y asignar a variables individuales*/
+
+    /**Estudainte */
+    const e1 = {
+        nombre: 'Edison1',
+        apellido: 'Cayambe',
+        edad: 36,
+        ecuatoriana: true,
+        genero: 'M',
+        ciudad: 'Quito'
+    };
+    const e2 = {
+        nombre: 'Edison2',
+        apellido: 'Cayambe',
+        edad: 36,
+        ecuatoriana: true,
+        genero: 'M',
+        ciudad: 'Quito'
+    };
+    const arregloEstudiantes=[e1,e2,{
+        nombre: 'Edison3',
+        apellido: 'Cayambe',
+        edad: 36,
+        ecuatoriana: true,
+        genero: 'M',
+        ciudad: 'Quito'
+    }];
+
+    console.log(arregloEstudiantes[0])
+    console.log(arregloEstudiantes[2])
+    /**Arreglos */
+
+    const ar1=[1,2,3,4,5,6,7];
+    const[a,b,c,d]=ar1;
+    console.log(a);
+    console.log(d);
+
+    const[primero,,,,,,ultimo]=ar1;
+    console.log(primero)
+    console.log(ultimo)
+
+    const [pos1,pos2]=[1,2,3,4,5,6,7];
+    imprime("David"+ar1);
+
+    //Objetos
+    const e3 = {
+        nombre: 'Edison3',
+        apellido: 'Cayambe3',
+        edad: 36,
+        ecuatoriana: true,
+        genero: 'M',
+        ciudad: 'Quito3'
+    };
+
+    const{nombre1, ciudad}=e3;
+    console.log(nombre1)
+    //console.log(ciudad)
+
+
+    const{nombre :n, ciudad1 :ciu}={
+        nombre: 'Edison3',
+        apellido: 'Cayambe3',
+        edad: 36,
+        ecuatoriana: true,
+        genero: 'M',
+        ciudad: 'Quito3'
+    };
+    console.log(n);
+    console.log(ciu);
+
+    const e4 = {
+        nombre: 'Edison34',
+        apellido: 'Cayambe4',
+        edad: 36,
+        ecuatoriana: true,
+        genero: 'M',
+        ciudad: 'Quito4',
+        direccion:{
+            calle: "Av. America",
+            barrio: "La Gasca",
+            numeracion:"1231"
+        }
+    };
+
+    console.log(e4.direccion.calle);
+
+    const{edad1,direccion}=e4
+    console.log(direccion)
+    const{barrio}=direccion;
+    console.log(barrio);
+
+    const{direccion:{calle:c1}}=e4;
+    console.log(c1);
+}
+function imprime([a,b,c]){
+    console.log(a);
+    console.log(b);
+    console.log(c);
+
 }
