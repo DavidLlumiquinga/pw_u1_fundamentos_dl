@@ -1,28 +1,28 @@
-let num1=0;
-let num2=0;
 
 function mostrarDisplay(valor) {
     let elemento = document.getElementById('display')
     elemento.innerText= elemento.innerText+valor;
-} 
-
-
-function sumar(){
-
 }
 
-function restar(){
-
+function clearDisplay() {
+    const elemento = document.getElementById('display');
+    if (!elemento) return;
+    elemento.innerText = '';
 }
 
-function multiplicar(){
-
+function backspace() {
+    const elemento = document.getElementById('display');
+    if (!elemento) return;
+    elemento.innerText = elemento.innerText.slice(0, -1);
 }
 
-function dividir(){
-
+function sumar() {
+    const elemento = document.getElementById('display');
+    if (!elemento) return;
+    const expr = elemento.innerText.trim();
+    if (!expr) return;
+    const cleaned = expr.replace(/(\d+(?:\.\d+)?)%/g, '($1/100)');
+    elemento.innerText = String(eval(cleaned))
 }
 
-function porcentaje() {
 
-}
