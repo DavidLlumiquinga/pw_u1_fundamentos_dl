@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+     flex-direction: column;
+    justify-content: center;
+   
+    align-items: center;
+}
+
+body {
+    background-color: #59abe3;
+
+
+}
+
+p:before { /*elemento before para sustituir al input con el elemento html p*/
+    content: attr(type);  /*al elemenot p habilite el contenido del atributo type*/
+    display: block; /*ocupa el display completo*/
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 40px;
+    
+}
+
+input {
+    width: 270px;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 2px solid #26269b ;
+    background: none;
+    color: #000000;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 3px solid #2222be;
+}
+
+.formulario {
+    background: #9090b9;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 10px 10px #000000;
+
+}
+
+button {
+    background: #a7a7a7;
+    padding: 10px 20 px;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.centrar-boton{
+    display: flex;
+    justify-content: center;
+
+}
+
+footer {
+    margin-top: 22px;
+
+}
+
+h2, header {
+    color: #e7e7e7;
+    border-bottom: 2px solid #000000;
+}
+
+
+
